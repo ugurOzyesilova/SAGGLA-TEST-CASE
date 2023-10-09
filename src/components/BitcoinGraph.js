@@ -4,7 +4,7 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip} from 'recharts';
 import "../styles/Graph.css"
 import { AiOutlineExclamationCircle } from "react-icons/ai"
 
-const CryptoChart = () => {
+const BitcoinGraph = () => {
     const [chartData, setChartData] = useState([]);
 
     useEffect(() => {
@@ -77,4 +77,4 @@ const CryptoChart = () => {
     );
 };
 
-export default CryptoChart;
+export default BitcoinGraph;
