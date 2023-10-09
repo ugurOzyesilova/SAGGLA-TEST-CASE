@@ -1,0 +1,99 @@
+.Graph {
+  width: 45%;
+  border-radius: 8px;
+  z-index: 2;
+  backdrop-filter: blur(2rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  filter: drop-shadow(1px 1px 8px rgba(256, 196, 36, 0.6));
+  height: 48vh;
+  padding:10px 0;
+    @media (max-width: 1450px) {
+        width:50%;
+        filter:none;
+    }
+    @media (max-width: 1360px) {
+        width:100%;
+        filter:none;
+    }
+}
+
+@media (max-width:768px) {
+    .hour-chart{
+        display:none;
+    }
+}
+
+.Graph__info {
+  color: #efefef;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  padding-left: 25px;
+  display: flex;
+}
+
+.Graph__info-socket {
+  display: flex;
+  
+  justify-content: space-between;
+  align-items: center;
+ 
+}
+
+.Graph__info-socket-refresh {
+  margin-right: 10px;
+  color: #ffc424;
+  animation: rotate 4s linear infinite;
+  font-size: 20px;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.Graph__info-socket > h2 {
+  color: #efefef;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  padding-left: 25px;
+  filter: drop-shadow(1px 1px 8px rgba(256, 196, 36, 0.02));
+  display: flex;
+}
+
+.Graph__info span,
+.Graph__info-socket span {
+  color: #808080;
+  font-size: 14px;
+  margin-top: 12px;
+  margin-left: 6px;
+}
+.Graph__container {
+  width: 100%;
+  padding: 10px;
+}
+
+.Graph__line-chart {
+  margin: 0 auto;
+  //filter: drop-shadow(1px 1px 8px rgba(256, 196, 36, 1));
+}
+.warning {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  padding-left: 25px;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  color: #808080;
+  filter: drop-shadow(1px 1px 8px rgba(256, 196, 36, 0.1));
+}
+
+.warning-icon {
+  color: #efefef;
+  font-size: 16px;
+  margin-bottom: 2px;
+}

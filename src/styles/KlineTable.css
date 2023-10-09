@@ -1,0 +1,175 @@
+.KlineTable {
+  display: flex;
+  width: 100%;
+  height: 33vh;
+  font-family: "Poppins", sans-serif;
+  color: #efefef;
+  @media (max-width: 1360px) {
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+  }
+  @media (max-width: 1450px) {
+    margin-top: 6vh;
+    height: 50%;
+  }
+   
+}
+
+.KlineTable-datas {
+  width: 45%;
+  margin-left: 2.1vw;
+  @media (max-width: 1360px) {
+    width: 100%;
+  }
+   @media (max-width: 768px) {
+        overflow:hidden;
+        
+        
+    }
+}
+
+.KlineTable-fetch {
+  filter: drop-shadow(1px 1px 8px rgba(256, 196, 36, 0.4));
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 96%;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+
+.KlineTable-fetch h2 {
+  font-weight:500;
+
+}
+
+.KlineTable-fetch button > span {
+  margin-left: 10px;
+  color: #ffc424;
+}
+
+.KlineTable-fetch button {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 0.4rem;
+  font-family: "Poppins", sans-serif;
+  border: none;
+  font-weight: bold;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.01),
+    rgba(255, 255, 255, 0.03)
+  );
+  backdrop-filter: blur(2rem);
+}
+
+.button-icon {
+  color: yellow;
+}
+
+.table-container {
+  overflow: auto;
+  max-height: 24vh;
+   @media (max-width: 1450px) {
+    overflow-x:hidden
+  }
+  
+  @media (max-width: 768px) {
+    max-height:31vh;
+    overflow-y:scroll;
+    font-size:10px;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: none;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #ffc424;
+}
+
+table {
+  width: 100%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  
+}
+
+.KlineTable-datas thead > tr > th {
+  background: black;
+  
+  color: #ffc424;
+  padding: 10px;
+  border-bottom: 2px solid #ffc424;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+td {
+  filter: drop-shadow(1px 1px 8px rgba(256, 196, 36, 0.4));
+  color: #efefef;
+  padding: 8px;
+  text-align: center;
+}
+
+.Bar-Chart {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+  align-items: center;
+  filter: drop-shadow(1px 1px 8px rgba(256, 196, 36, 0.4));
+  @media (max-width: 1450px) {
+    width: 100%;
+    justify-content: center;
+    padding-left:36px;
+  }
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.Bar-Chart-info {
+  display: flex;
+  width: 50%;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media (max-width: 1360px) {
+    width: 100%;
+  }
+}
+
+.Bar-Chart-info p {
+  padding-left: 20px;
+  padding-bottom: 20px;
+  font-size: 40px;
+  width: 85%;
+  font-weight: 500;
+  filter: drop-shadow(1px 1px 8px rgba(256, 196, 36, 0.4));
+  @media (max-width: 1360px) {
+    width: 90%;
+  }
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
