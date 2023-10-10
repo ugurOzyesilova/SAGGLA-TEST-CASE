@@ -4,16 +4,17 @@
   height: 33vh;
   font-family: "Poppins", sans-serif;
   color: #efefef;
-  @media (max-width: 1360px) {
+  @media (max-width: 1350px) {
     flex-direction: column;
-    height: 100%;
+  
+    height: 50vh;
     width: 100%;
   }
   @media (max-width: 1450px) {
     margin-top: 6vh;
     height: 50%;
-  }
    
+  }
 }
 
 .KlineTable-datas {
@@ -21,16 +22,16 @@
   margin-left: 2.1vw;
   @media (max-width: 1360px) {
     width: 100%;
+    margin: 0;
+    height: 100%;
+    
+   
   }
-   @media (max-width: 768px) {
-        overflow:hidden;
-        margin:0;
-        
-        
-    }
+  @media (max-width: 768px) {
+    overflow: hidden;
+    margin: 0;
+  }
 }
-
-
 
 .KlineTable-fetch {
   filter: drop-shadow(1px 1px 8px rgba(256, 196, 36, 0.4));
@@ -42,8 +43,8 @@
   padding: 10px 0;
 }
 
-.app-light .KlineTable-fetch{
-  filter:none;
+.app-light .KlineTable-fetch {
+  filter: none;
 }
 
 .app-light .KlineTable-fetch {
@@ -51,8 +52,7 @@
 }
 
 .KlineTable-fetch h2 {
-  font-weight:500;
-
+  font-weight: 500;
 }
 
 .KlineTable-fetch button > span {
@@ -85,14 +85,18 @@
 .table-container {
   overflow: auto;
   max-height: 24vh;
-   @media (max-width: 1450px) {
-    overflow-x:hidden
+  @media (max-width: 1450px) {
+    overflow-x: hidden;
   }
-  
+  @media (max-width: 1350px) {
+    overflow-x: hidden;
+    max-height: 36vh;
+  }
+
   @media (max-width: 768px) {
-    max-height:31vh;
-    overflow-y:scroll;
-    font-size:10px;
+    max-height: 36vh;
+    overflow-y: scroll;
+    font-size: 10px;
   }
 }
 
@@ -119,12 +123,11 @@ table {
   width: 100%;
   margin: 0 auto;
   border-collapse: collapse;
-  
 }
 
 .KlineTable-datas thead > tr > th {
   background: black;
-  
+
   color: #ffc424;
   padding: 10px;
   border-bottom: 2px solid #ffc424;
@@ -145,7 +148,7 @@ td {
   text-align: center;
 }
 
-.app-light td{
+.app-light td {
   filter: drop-shadow(1px 1px 8px rgba(255, 255, 255, 0.4));
 }
 
@@ -160,7 +163,10 @@ td {
   @media (max-width: 1450px) {
     width: 100%;
     justify-content: center;
-    padding-left:36px;
+    padding-left: 36px;
+  }
+  @media (max-width: 1350px) {
+    display: none;
   }
   @media (max-width: 768px) {
     display: none;
@@ -201,5 +207,5 @@ td {
 
 .app-light .Bar-Chart-info p {
   filter: drop-shadow(1px 1px 8px rgba(255, 255, 255, 0.4));
-  
 }
+
