@@ -167,6 +167,10 @@ td {
   }
 }
 
+.app-light .Bar-Chart {
+  filter: drop-shadow(1px 1px 8px rgba(255, 255, 255, 0.4));
+}
+
 .Bar-Chart-info {
   display: flex;
   width: 50%;
