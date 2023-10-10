@@ -3,7 +3,7 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip} from 'recharts';
 import { TbRefresh } from "react-icons/tb"
 import { AiOutlineExclamationCircle } from "react-icons/ai"
 
-const SocketGraph = () => {
+const SocketGraph = ({theme}) => {
     const [tradeData, setTradeData] = useState([]);
     const [isWebSocketConnected, setIsWebSocketConnected] = useState(true);
     const [chartWidth, setChartWidth] = useState(620);
@@ -122,10 +122,11 @@ const SocketGraph = () => {
                             connectNulls type="monotone"
 
                             dataKey="p"
-                            stroke="#ffc424"
+                            stroke={theme === 'app-dark' ? '#ffc424' : '#efefef'}
                             strokeWidth={2}
-                            dot={{ r: 2, fill: 'yellow' }}
+                            dot={theme === 'app-dark' ? { r: 2, fill: 'yellow' } : { r: 2, fill: 'white' }} // Corrected dot syntax
                         />
+                          
                     </LineChart>
                 </div>
             )}

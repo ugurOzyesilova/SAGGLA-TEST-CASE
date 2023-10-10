@@ -19,6 +19,10 @@
     }
 }
 
+.app-light .Graph {
+  filter: drop-shadow(1px 1px 8px rgba(255, 255, 255, 0.4));
+}
+
 @media (max-width:768px) {
     .hour-chart{
         display:none;

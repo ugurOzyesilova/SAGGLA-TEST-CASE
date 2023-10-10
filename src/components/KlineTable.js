@@ -5,7 +5,7 @@ import "../styles/KlineTable.css"
 import { MdCurrencyBitcoin } from "react-icons/md"
 
 
-function KlineDataDisplay() {
+function KlineDataDisplay({theme}) {
 
     const [klineData, setKlineData] = useState([]);
     const [currentTimes, setCurrentTimes] = useState([]);
@@ -131,7 +131,7 @@ function KlineDataDisplay() {
                             axisLine={{ stroke: 'gray', strokeWidth: 2 }}
                         />
                         <Tooltip labelFormatter={(value) => `Timestamp: ${formatTimestamp(value)}`} formatter={(value) => `$${value}`} />
-                        <Bar dataKey="closePrice" fill="#ffc424" barSize={20} />
+                        <Bar dataKey="closePrice" fill={theme === 'app-dark' ? '#ffc424' : '#efefef'} barSize={20} />
                     </BarChart>
                 </div>
             ) : (

@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 
-.app {
+.app-dark, .app-light {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -24,6 +24,20 @@
   @media (max-width: 1450px) {
     background: black;
   }
+}
+
+.app-light {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    47deg,
+    rgba(0, 0, 0, 1) 2%,
+    rgba(256, 196, 36, 0.1) 100%
+  );
+}
+
+
+.app-light p {
+  color: #efefef !important;
 }
 
 .ball,
@@ -52,6 +66,17 @@
   height: 1000px;
   filter: none;
   opacity: 0.6;
+}
+
+.app-light > .ball {
+  background:black;
+  opacity: 0.2
+}
+
+.app-light > .ball2 {
+  background:black;
+  opacity: 0.4;
+  ackground: rgba(256, 196, 36, 0.9);
 }
 
 .app-glass {
@@ -111,4 +136,9 @@
   > li {
   margin-top: 10px !important;
   padding-top: 10px !important;
+}
+
+
+.app-light  * {
+  color: #efefef !important;
 }

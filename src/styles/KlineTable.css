@@ -24,10 +24,13 @@
   }
    @media (max-width: 768px) {
         overflow:hidden;
+        margin:0;
         
         
     }
 }
+
+
 
 .KlineTable-fetch {
   filter: drop-shadow(1px 1px 8px rgba(256, 196, 36, 0.4));
@@ -37,6 +40,14 @@
   width: 96%;
   margin: 0 auto;
   padding: 10px 0;
+}
+
+.app-light .KlineTable-fetch{
+  filter:none;
+}
+
+.app-light .KlineTable-fetch {
+  filter: none;
 }
 
 .KlineTable-fetch h2 {
@@ -121,11 +132,21 @@ table {
   top: 0;
   z-index: 2;
 }
+
+.app-light .KlineTable-datas thead > tr > th {
+  background: gray;
+  border-bottom: 2px solid #efefef;
+}
+
 td {
   filter: drop-shadow(1px 1px 8px rgba(256, 196, 36, 0.4));
   color: #efefef;
   padding: 8px;
   text-align: center;
+}
+
+.app-light td{
+  filter: drop-shadow(1px 1px 8px rgba(255, 255, 255, 0.4));
 }
 
 .Bar-Chart {
@@ -172,4 +193,9 @@ td {
   @media (max-width: 768px) {
     display: none;
   }
+}
+
+.app-light .Bar-Chart-info p {
+  filter: drop-shadow(1px 1px 8px rgba(255, 255, 255, 0.4));
+  
 }

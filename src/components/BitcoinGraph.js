@@ -4,7 +4,7 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip} from 'recharts';
 import "../styles/Graph.css"
 import { AiOutlineExclamationCircle } from "react-icons/ai"
 
-const CryptoChart = () => {
+const BitcoinGraph = ({theme}) => {
     const [chartData, setChartData] = useState([]);
 
     useEffect(() => {
@@ -61,11 +61,12 @@ const CryptoChart = () => {
                     <Line
                         type="monotone"
                         dataKey="price"
-                        stroke="#ffc424"
+                        stroke={theme === 'app-dark' ? '#ffc424' : '#efefef'}
                         strokeWidth={1}
-                        dot={{ r: 5, fill: 'yellow' }}
+                        dot={theme === 'app-dark' ? { r: 5, fill: 'yellow' } : { r: 5, fill: 'white' }} // Corrected dot syntax
                     />
                 </LineChart>
+                 
             </div>
             <div className='warning'>
                 <AiOutlineExclamationCircle className = "warning-icon"/>
@@ -77,4 +78,4 @@ const CryptoChart = () => {
     );
 };
 
-export default CryptoChart;
+export default BitcoinGraph;

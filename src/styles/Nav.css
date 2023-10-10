@@ -19,11 +19,15 @@ nav {
 }
 
 .nav-coin {
-  color: black;
   filter: drop-shadow(1px 1px 8px rgba(256, 196, 36, 0.9));
   font-size: 50px;
   color: rgb(256, 196, 36);
 }
+
+.app-light  .nav-coin {
+  filter: drop-shadow(1px 1px 8px rgba(256, 196, 36, 0.9));
+}
+
 
 .hamburger {
     height: 40px;
@@ -32,8 +36,8 @@ nav {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-
 }
+
 
 .hamburger div {
     height: 4px;
@@ -41,6 +45,11 @@ nav {
     box-shadow: 0px 0px 20px 1px rgb(256, 196, 36);
     background-color: rgb(256, 196, 36);
     border-radius:10px;
+}
+
+.app-light .hamburger div {
+  background-color:#efefef !important;
+  box-shadow: 0px 0px 20px 1px rgb(0, 0, 0, 0.2);
 }
 
 .middle__line {
