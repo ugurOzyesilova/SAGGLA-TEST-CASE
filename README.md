@@ -9,7 +9,7 @@
 #### Navigate the Project
 
 ```bash
-  cd cd SAGGLA-TEST-CASE
+   cd SAGGLA-TEST-CASE
 ```
 
 #### Dependencies
